@@ -289,9 +289,10 @@ Each order item references a food item.
 
 Food and restaurant records are connected through restaurant_id.
 
-📁 Project Structure
+## 📁 Project Structure
 
-Restaurant/
+```text
+FoodHub/
 │
 ├── admin/
 │   ├── add_restaurant.php
@@ -329,23 +330,12 @@ Restaurant/
 │   ├── add_food_process.php
 │   ├── add_restaurant_process.php
 │   ├── cart_process.php
-│   ├── complete_restaurant_profile_process.php
-│   ├── decrease_quantity.php
-│   ├── delete_food.php
-│   ├── edit_food_process.php
-│   ├── edit_profile_process.php
-│   ├── food_action.php
-│   ├── forgot_password.php
-│   ├── increase_quantity.php
 │   ├── login_process.php
-│   ├── place_order.php
 │   ├── register_process.php
-│   ├── remove_from_cart_process.php
-│   ├── reset_password.php
-│   ├── toggle_restaurant.php
+│   ├── place_order.php
 │   ├── update_order.php
-│   ├── update_restaurant_profile.php
-│   └── wishlist_process.php
+│   ├── wishlist_process.php
+│   └── ...
 │
 ├── includes/
 │   ├── admin_navbar.php
@@ -357,9 +347,14 @@ Restaurant/
 │
 ├── assets/
 │   ├── css/
-│   ├── images/
-│   ├── js/
-│   └── uploads/
+│   │   ├── admin.css
+│   │   ├── restaurant.css
+│   │   ├── restaurant_dashboard.css
+│   │   ├── user.css
+│   │   └── ...
+│   │
+│   └── js/
+│       └── script.js
 │
 ├── uploads/
 │   ├── foods/
@@ -374,6 +369,7 @@ Restaurant/
 ├── index.php
 ├── .gitignore
 └── README.md
+```
 
 🔐 Key Implementation Details
 
@@ -589,11 +585,6 @@ The current version focuses on the core food-ordering workflow. Possible future 
 
 📈 Advanced reporting and analytics
 
-🎯 Project Purpose
-
-FoodHub was developed as a practical portfolio project to demonstrate:
-
-Authentication · Role-Based Access · CRUD Operations · MySQL Relationships · Cart & Wishlist · Food Management · Order Processing · Payment Integration · File Uploads · Session Management · Responsive UI
 
 👩‍💻 Author
 
