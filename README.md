@@ -1,137 +1,397 @@
 🍽️ FoodHub
 
-A role-based online food ordering system built with Core PHP and
-MySQL.
+<p align="center">
+  <strong>A Role-Based Online Food Ordering System built with Core PHP & MySQL</strong>
+</p>
 
-FoodHub connects customers, restaurants, and administrators in one
-web application. Customers can browse food, manage their cart and
-wishlist, place orders and view order history. Restaurants can manage
-food items and process customer orders, while admins manage restaurants,
-food approvals and platform orders.
+<p align="center">
+  FoodHub connects Customers, Restaurants, and Administrators in one web application.
+</p>
 
-✨ Modules
+<p align="center">
+  <img src="https://img.shields.io/badge/PHP-Core%20PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+  <img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+  <img src="https://img.shields.io/badge/Bootstrap-5.3.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+</p>
 
-👤 User                 🏪 Restaurant           🛡️ Admin
+📖 About the Project
 
-Register & Login        Restaurant Profile      Admin Dashboard
+FoodHub is a role-based food ordering web application developed using Core PHP, PDO, MySQL, HTML, CSS, Bootstrap, and JavaScript.
 
-Browse Food             Add / Edit Food         Add Restaurants
+The application provides separate functionality for three roles:
 
-Cart Management         Manage Food             Manage Restaurants
+Role
 
-Wishlist                Pending Food            Activate / Deactivate
-Restaurants
+Main Responsibilities
 
-Checkout                Customer Orders         Food Approval
+👤 Customer
 
-COD & Razorpay Flow     Order Details           View Orders
+Browse food, manage cart and wishlist, checkout, place orders, and view order history
 
-My Orders               Order Status Management Restaurant Food
-Management
+🏪 Restaurant
 
-🛠️ Tech Stack
+Manage restaurant profile, manage food items, view customer orders, and update order status
 
-Frontend: HTML5 · CSS3 · Bootstrap 5.3.3 · JavaScript · Bootstrap
+🛡️ Admin
+
+Manage restaurants, review food requests, approve/reject food, and view platform orders
+
+✨ Features
+
+👤 Customer Module
+
+🔐 User registration and login
+
+🍔 Browse available food items
+
+🛒 Add and manage cart items
+
+❤️ Wishlist management
+
+💳 Checkout
+
+💵 Cash on Delivery (COD)
+
+💳 Razorpay payment flow
+
+📦 Place food orders
+
+📋 View order history
+
+🔎 View order details
+
+👤 View and edit profile
+
+🔑 Password reset workflow
+
+🏪 Restaurant Module
+
+🔐 Restaurant-owner login
+
+🏪 Complete and manage restaurant profile
+
+📊 Restaurant dashboard
+
+➕ Add food items
+
+✏️ Edit food items
+
+🗂️ Manage food items
+
+⏳ View pending food items
+
+📦 View customer orders
+
+🔎 View complete order details
+
+👤 View customer and delivery information
+
+💳 View payment information
+
+🔄 Update order status
+
+Restaurant Order Status Flow
+
+Pending
+   │
+   ├──────────────► Cancelled
+   │
+   ▼
+Confirmed
+   │
+   ▼
+Delivered
+
+🛡️ Admin Module
+
+📊 Admin dashboard
+
+➕ Add restaurants
+
+🏪 Manage restaurants
+
+🔄 Activate / deactivate restaurants
+
+🍔 View restaurant food items
+
+⏳ View food requests
+
+✅ Approve food items
+
+❌ Reject food items
+
+📦 View platform orders
+
+🛠️ Technology Stack
+
+Category
+
+Technology
+
+Frontend
+
+HTML5, CSS3, Bootstrap 5.3.3, JavaScript
+
 Icons
-Backend: Core PHP · PDO
-Database: MySQL
-Payments: Razorpay
-Development: XAMPP · Git · GitHub
 
-🔄 Order Management
+Bootstrap Icons
 
-Customer
-   │
-   ▼
-Browse Food
-   │
-   ▼
-Cart / Checkout
-   │
-   ▼
-Select Payment Method
-   │
-   ▼
-Place Order
-   │
-   ▼
-Restaurant Receives Order
-   │
-   ├── Pending
-   │     ├── Confirmed ──► Delivered
-   │     └── Cancelled
-   │
-   ▼
-Customer can view order history
+Backend
 
-🗄️ Database
+Core PHP
 
-FoodHub currently uses 9 MySQL tables:
+Database
 
-Table               Purpose
+MySQL
 
-users             Stores user, restaurant-owner and admin accounts
-restaurants       Stores restaurant details and owner relationship
-foods             Stores restaurant food items
-cart              Stores users' cart items
-wishlist          Stores users' wishlist items
-orders            Stores customer order and payment information
-order_item        Stores individual items within an order
-food_images       Stores food image records
-password_resets   Stores password reset information
+Database Access
+
+PDO
+
+Payment
+
+Razorpay
+
+Local Server
+
+XAMPP
+
+Version Control
+
+Git & GitHub
+
+🔄 Application Workflow
+
+                         ┌─────────────────┐
+                         │     Customer    │
+                         └────────┬────────┘
+                                  │
+                                  ▼
+                         ┌─────────────────┐
+                         │   Browse Food   │
+                         └────────┬────────┘
+                                  │
+                         ┌────────┴────────┐
+                         ▼                 ▼
+                    ┌─────────┐      ┌───────────┐
+                    │  Cart   │      │ Wishlist  │
+                    └────┬────┘      └───────────┘
+                         │
+                         ▼
+                    ┌───────────┐
+                    │ Checkout  │
+                    └─────┬─────┘
+                          │
+                    ┌─────┴─────┐
+                    ▼           ▼
+                  ┌────┐    ┌──────────┐
+                  │ COD│    │ Razorpay │
+                  └─┬──┘    └────┬─────┘
+                    │            │
+                    └──────┬─────┘
+                           ▼
+                    ┌─────────────┐
+                    │ Place Order │
+                    └──────┬──────┘
+                           │
+                           ▼
+                  ┌──────────────────┐
+                  │    Restaurant    │
+                  │  Receives Order  │
+                  └────────┬─────────┘
+                           │
+                           ▼
+                  Pending → Confirmed
+                           │
+                           ▼
+                       Delivered
+
+🗄️ Database Design
+
+FoodHub uses 9 MySQL tables.
+
+Table
+
+Purpose
+
+users
+
+Stores customer, restaurant-owner, and admin accounts
+
+restaurants
+
+Stores restaurant details and owner relationship
+
+foods
+
+Stores restaurant food items
+
+cart
+
+Stores food items added to customer carts
+
+wishlist
+
+Stores food items saved by customers
+
+orders
+
+Stores customer order, delivery, and payment information
+
+order_item
+
+Stores individual food items belonging to an order
+
+food_images
+
+Stores food image records
+
+password_resets
+
+Stores password-reset information
 
 Database Relationship
 
 users
- ├── restaurants ──► foods
  │
- ├── cart ─────────► foods
+ ├──────────────► restaurants
+ │                     │
+ │                     ▼
+ │                   foods
+ │                     ▲
+ │                     │
+ ├──────────────► cart ┘
  │
- ├── wishlist ─────► foods
+ ├──────────────► wishlist
  │
- └── orders ───────► order_item ─────► foods
+ └──────────────► orders
+                       │
+                       ▼
+                   order_item
+                       │
+                       ▼
+                     foods
+
+Important Relationships
+
+A user can own a restaurant.
+
+A restaurant can have multiple food items.
+
+A user can have multiple cart and wishlist entries.
+
+A user can place multiple orders.
+
+An order can contain multiple order items.
+
+Each order item references a food item.
+
+Food and restaurant records are connected through restaurant_id.
 
 📁 Project Structure
 
 Restaurant/
 │
-├── admin/                  # Admin module
-├── restaurant/             # Restaurant module
-├── user/                   # Customer module
+├── admin/
+│   ├── add_restaurant.php
+│   ├── approve_food.php
+│   ├── dashboard.php
+│   ├── food_request.php
+│   ├── manage_restaurant.php
+│   ├── orders.php
+│   └── view_restaurant_foods.php
 │
-├── process/                # Form & business logic
-├── includes/               # Shared navigation/session files
+├── restaurant/
+│   ├── add_food.php
+│   ├── complete_profile.php
+│   ├── dashboard.php
+│   ├── edit_food.php
+│   ├── edit_profile.php
+│   ├── logout.php
+│   ├── manage_food.php
+│   ├── order_details.php
+│   ├── order_status.php
+│   ├── orders.php
+│   └── pending_foods.php
+│
+├── user/
+│   ├── cart.php
+│   ├── checkout.php
+│   ├── dashboard.php
+│   ├── edit_profile.php
+│   ├── my_orders.php
+│   ├── order_success.php
+│   ├── profile.php
+│   └── wishlist.php
+│
+├── process/
+│   ├── add_food_process.php
+│   ├── add_restaurant_process.php
+│   ├── cart_process.php
+│   ├── complete_restaurant_profile_process.php
+│   ├── decrease_quantity.php
+│   ├── delete_food.php
+│   ├── edit_food_process.php
+│   ├── edit_profile_process.php
+│   ├── food_action.php
+│   ├── forgot_password.php
+│   ├── increase_quantity.php
+│   ├── login_process.php
+│   ├── place_order.php
+│   ├── register_process.php
+│   ├── remove_from_cart_process.php
+│   ├── reset_password.php
+│   ├── toggle_restaurant.php
+│   ├── update_order.php
+│   ├── update_restaurant_profile.php
+│   └── wishlist_process.php
+│
+├── includes/
+│   ├── admin_navbar.php
+│   ├── footer.php
+│   ├── header.php
+│   ├── restaurant_navbar.php
+│   ├── session.php
+│   └── user_navbar.php
+│
 ├── assets/
-│   ├── css/                # Application stylesheets
-│   └── js/                 # JavaScript
+│   ├── css/
+│   ├── images/
+│   ├── js/
+│   └── uploads/
 │
 ├── uploads/
-│   ├── foods/              # Food images
-│   ├── profiles/           # Profile images
-│   └── restaurants/        # Restaurant images
+│   ├── foods/
+│   ├── profiles/
+│   └── restaurants/
 │
-├── config/                 # Database configuration
-├── database/               # Database resources
+├── config/
+│   └── db.php
 │
-├── index.php               # Application entry point
-├── .gitignore              # Ignored files/secrets
+├── database/
+│
+├── index.php
+├── .gitignore
 └── README.md
 
 🔐 Key Implementation Details
 
 Session-based authentication
 
-Separate functionality for Admin, Restaurant and User roles
+Role-based access for Customer, Restaurant, and Admin
+
+Separate dashboards and navigation for each role
 
 PDO prepared statements for database operations
 
-Role-specific dashboards and navigation
+CRUD operations for food and restaurant management
 
-Food approval workflow
+Admin food approval workflow
 
 Cart and wishlist management
 
-Order creation and order-item storage
+Order and order-item management
 
 Restaurant-specific order access
 
@@ -141,29 +401,43 @@ Customer delivery information
 
 COD and Razorpay payment flow
 
+Food and restaurant image uploads
+
 Password reset functionality
 
-Image upload handling
-
-Sensitive configuration excluded through .gitignore
+Sensitive local configuration excluded through .gitignore
 
 💳 Payment Flow
 
 Cash on Delivery
 
-Checkout → COD → Order Created → Order Success
+Checkout
+   ↓
+Select COD
+   ↓
+Order Created
+   ↓
+Order Success
 
 Razorpay
 
-Checkout → Razorpay Payment → Payment Details
-          → Order Processing → Order Created
+Checkout
+   ↓
+Select Razorpay
+   ↓
+Payment Flow
+   ↓
+Payment Details
+   ↓
+Order Created
 
-Security: Payment keys, SMTP credentials, database credentials and
-other secrets should never be committed to the repository.
+⚠️ Security: Never commit database passwords, SMTP credentials, Razorpay secrets, API keys, or other sensitive credentials to GitHub.
 
 ⚙️ Local Setup
 
-Requirements
+Prerequisites
+
+Make sure the following are installed:
 
 XAMPP
 
@@ -175,91 +449,154 @@ PHP
 
 Git
 
-Installation
+Web browser
 
-1. Clone the repository
+1. Clone the Repository
 
 git clone https://github.com/ranashivangi43-maker/FoodHub.git
 
-2. Place the project
+2. Move the Project
+
+Place the project inside your XAMPP htdocs directory.
+
+Example:
 
 C:\xampp\htdocs\PHP\Restaurant
 
 3. Start XAMPP
 
-Start Apache and MySQL.
+Start:
 
-4. Create the database
+Apache
+MySQL
+
+4. Create the Database
 
 Open:
 
 http://localhost/phpmyadmin
 
-Create:
+Create a database named:
 
 restaurant_project
 
-Import the project database schema.
+Import the required database schema into the database.
 
-5. Configure the database
+5. Configure Database Connection
 
-Update the local credentials in:
+Open:
 
 config/db.php
 
-6. Run the application
+Configure your local MySQL credentials.
+
+Do not upload real credentials to GitHub.
+
+6. Run the Application
+
+Open:
 
 http://localhost/PHP/Restaurant/
 
-🧪 Main Workflows to Test
+🧪 Testing Workflows
 
-User
+Customer Workflow
 
-Register → Login → Browse Food → Cart/Wishlist → Checkout → Place Order → My Orders
+Register
+   ↓
+Login
+   ↓
+Browse Food
+   ↓
+Add to Cart / Wishlist
+   ↓
+Checkout
+   ↓
+Select Payment Method
+   ↓
+Place Order
+   ↓
+My Orders
+   ↓
+View Order Details
 
-Restaurant
+Restaurant Workflow
 
-Login → Complete Profile → Manage Food → View Orders → Order Details → Update Status
+Login
+   ↓
+Complete Restaurant Profile
+   ↓
+Add / Manage Food
+   ↓
+View Customer Orders
+   ↓
+Open Order Details
+   ↓
+Confirm / Cancel Order
+   ↓
+Mark Confirmed Order as Delivered
 
-Admin
+Admin Workflow
 
-Login → Manage Restaurants → Review Food Requests → Approve/Reject Food → View Orders
+Login
+   ↓
+Admin Dashboard
+   ↓
+Manage Restaurants
+   ↓
+Review Food Requests
+   ↓
+Approve / Reject Food
+   ↓
+View Platform Orders
+
+🔒 Security & Configuration
+
+The project uses .gitignore to keep sensitive and local-development files out of version control.
+
+Typical ignored files include:
+
+.env
+.env.*
+*.sql
+*.sqlite
+*.db
+*.log
+.vscode/
+.idea/
+
+Local configuration files containing credentials should remain on the development machine and should not be committed to the public repository.
 
 🚀 Future Improvements
 
-Customer and restaurant notifications
+The current version focuses on the core food-ordering workflow. Possible future enhancements include:
 
-Live order tracking
+🔔 Customer and restaurant notifications
 
-Ratings and reviews
+📍 Live order tracking
 
-Advanced food search and filtering
+⭐ Ratings and reviews
 
-Restaurant-wise analytics
+🔎 Advanced food search and filtering
 
-Delivery partner module
+📊 Restaurant analytics
 
-Improved server-side payment verification
+🛵 Delivery partner module
 
-Production deployment
+🔐 Stronger server-side payment verification
 
-More detailed reporting and analytics
+☁️ Production deployment
 
-📌 Project Purpose
+📈 Advanced reporting and analytics
 
-FoodHub was developed as a practical full-stack PHP project to
-demonstrate:
+🎯 Project Purpose
 
-Authentication · Role-Based Access · CRUD · MySQL Relationships · Cart
-& Wishlist · Food Management · Order Processing · Payment Integration ·
-File Uploads · Responsive UI
+FoodHub was developed as a practical portfolio project to demonstrate:
+
+Authentication · Role-Based Access · CRUD Operations · MySQL Relationships · Cart & Wishlist · Food Management · Order Processing · Payment Integration · File Uploads · Session Management · Responsive UI
 
 👩‍💻 Author
 
 Shivangi Rana
 
 GitHub: ranashivangi43-maker
-
-📄 License
-
-This project is developed for educational and portfolio purposes.
