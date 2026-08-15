@@ -1,0 +1,1403 @@
+/* =========================
+   ADMIN DASHBOARD
+========================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f8f8;
+    color: #222;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.admin-navbar {
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.admin-navbar .navbar-brand {
+    color: white !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.admin-nav-link {
+    color: #f1f1f1 !important;
+    font-weight: 500;
+    position: relative;
+    margin-left: 20px;
+}
+
+.admin-nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #dc3545;
+    transition: 0.3s ease;
+}
+
+.admin-nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hamburger */
+
+.admin-navbar .navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+}
+
+.admin-navbar .navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.admin-navbar .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* =========================
+   DASHBOARD WRAPPER
+========================= */
+
+.dashboard-wrapper {
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+
+/* =========================
+   WELCOME SECTION
+========================= */
+
+.welcome-section {
+    margin-bottom: 40px;
+}
+
+.welcome-section h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.welcome-section p {
+    color: #777;
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   STAT CARDS
+========================= */
+
+.dashboard-card {
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    height: 100%;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+}
+
+
+/* Icon colors */
+
+.users-icon {
+    background: #e7f1ff;
+    color: #0d6efd;
+}
+
+.restaurant-icon {
+    background: #e8fff1;
+    color: #198754;
+}
+
+.pending-icon {
+    background: #fff4db;
+    color: #ff9800;
+}
+
+.approved-icon {
+    background: #ffe5e8;
+    color: #dc3545;
+}
+
+
+/* =========================
+   STAT TEXT
+========================= */
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.stat-label {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   MANAGEMENT CARDS
+========================= */
+
+.management-card {
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.management-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
+}
+
+.management-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #fff0f1;
+    color: #dc3545;
+
+    font-size: 24px;
+}
+
+.management-card h5 {
+    font-weight: 600;
+}
+
+.management-card p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.admin-btn {
+    background: #dc3545;
+    border: none;
+    color: white;
+
+    padding: 10px 22px;
+
+    border-radius: 50px;
+
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.admin-btn:hover {
+    background: #bb2d3b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+.admin-logout {
+    border-radius: 50px;
+    padding: 8px 20px;
+}
+
+/* =========================================
+   ADMIN PAGE
+========================================= */
+
+.admin-page {
+    min-height: 100vh;
+    padding-top: 125px;
+    padding-bottom: 70px;
+    background: #f8f9fa;
+}
+
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.admin-page-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 35px;
+}
+
+.admin-page-heading p:first-child {
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.admin-page-heading h1 {
+    font-size: 2.2rem;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.admin-page-heading .text-muted {
+    font-size: 15px;
+}
+
+
+/* =========================================
+   FORM WRAPPER
+========================================= */
+
+.admin-form-card {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+
+    background: #fff;
+
+    border: none;
+    border-radius: 24px;
+
+    padding: 38px 45px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================
+   FORM ICON
+========================================= */
+
+.form-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 16px;
+
+    border-radius: 17px;
+
+    background: #ffe5e8;
+    color: #dc3545;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+/* =========================================
+   FORM HEADING
+========================================= */
+
+.admin-form-card h3 {
+    font-size: 1.45rem;
+    color: #111;
+}
+
+.admin-form-card .text-center p {
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FORM LABELS
+========================================= */
+
+.admin-form-card .form-label {
+    font-size: 14px;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.input-group {
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.clean-icon {
+    width: 48px;
+
+    border: none;
+    background: #f5f5f5;
+
+    color: #777;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clean-input {
+    border: none;
+
+    background: #f5f5f5;
+
+    padding: 14px 16px;
+
+    font-size: 14px;
+
+    box-shadow: none !important;
+}
+
+.clean-input::placeholder {
+    color: #777;
+}
+
+.clean-input:focus {
+    background: #efefef;
+}
+
+.input-group:focus-within .clean-icon {
+    background: #efefef;
+    color: #dc3545;
+}
+
+
+/* =========================================
+   PASSWORD HELP TEXT
+========================================= */
+
+.admin-form-card small {
+    display: block;
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.admin-form-card .btn-danger {
+    border: none;
+    background: #dc3545;
+
+    transition: 0.3s ease;
+}
+
+.admin-form-card .btn-danger:hover {
+    background: #bb2d3b;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   MANAGE RESTAURANTS
+========================================= */
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    color: #111;
+}
+
+.page-header .text-danger {
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   RESTAURANT SUMMARY
+========================================= */
+
+.restaurant-summary {
+    background: #fff;
+    border-radius: 18px;
+    padding: 18px 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    width: fit-content;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.summary-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 15px;
+
+    background: #ffe5e8;
+    color: #dc3545;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+
+/* =========================================
+   RESTAURANT CARD
+========================================= */
+
+.restaurant-card {
+    background: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s ease;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================
+   RESTAURANT IMAGE
+========================================= */
+
+.restaurant-image-wrapper {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+
+.restaurant-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s ease;
+}
+
+.restaurant-card:hover .restaurant-image {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   STATUS BADGE
+========================================= */
+
+.status-position {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 7px 12px;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    backdrop-filter: blur(8px);
+}
+
+.status-badge.active {
+    background: rgba(25, 135, 84, 0.95);
+    color: #fff;
+}
+
+.status-badge.inactive {
+    background: rgba(220, 53, 69, 0.95);
+    color: #fff;
+}
+
+
+/* =========================================
+   RESTAURANT BODY
+========================================= */
+
+.restaurant-body {
+    padding: 24px;
+}
+
+.restaurant-body h4 {
+    font-size: 1.25rem;
+    color: #111;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   RESTAURANT INFORMATION
+========================================= */
+
+.restaurant-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 14px;
+}
+
+.info-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background: #f5f5f5;
+    color: #666;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+}
+
+.restaurant-info small {
+    display: block;
+
+    color: #999;
+
+    font-size: 11px;
+    margin-bottom: 2px;
+}
+
+.restaurant-info p {
+    margin: 0;
+
+    color: #333;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.restaurant-actions {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 20px;
+    padding-top: 18px;
+
+    border-top: 1px solid #eee;
+}
+
+.restaurant-actions .btn {
+    flex: 1;
+
+    font-size: 13px;
+    padding: 9px 12px;
+
+    white-space: nowrap;
+}
+
+.restaurant-actions .btn-dark {
+    background: #111;
+    border-color: #111;
+}
+
+.restaurant-actions .btn-dark:hover {
+    background: #222;
+    border-color: #222;
+    transform: translateY(-2px);
+}
+
+.restaurant-actions .btn-outline-danger:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+    background: #fff;
+
+    border-radius: 22px;
+
+    padding: 60px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.empty-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 20px;
+
+    background: #ffe5e8;
+    color: #dc3545;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.empty-state h4 {
+    color: #111;
+}
+
+.empty-state p {
+    font-size: 14px;
+}
+
+/* =========================================
+   FOOD APPROVALS
+========================================= */
+
+.food-card {
+    background: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================
+   FOOD IMAGE
+========================================= */
+
+.food-image-wrapper {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+
+.food-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s ease;
+}
+
+.food-card:hover .food-image {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   PENDING BADGE
+========================================= */
+
+.food-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.food-pending-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 7px 13px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 152, 0, 0.95);
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================================
+   FOOD BODY
+========================================= */
+
+.food-body {
+    padding: 24px;
+}
+
+.food-body h4 {
+    font-size: 1.25rem;
+    color: #111;
+}
+
+
+/* =========================================
+   RESTAURANT INFO
+========================================= */
+
+.food-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 16px;
+}
+
+.food-info-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background: #f5f5f5;
+    color: #666;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-info small {
+    display: block;
+
+    color: #999;
+
+    font-size: 11px;
+    margin-bottom: 2px;
+}
+
+.food-info p {
+    margin: 0;
+
+    color: #333;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.food-description {
+    color: #777;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    margin-bottom: 18px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.food-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 13px 15px;
+
+    background: #f8f8f8;
+
+    border-radius: 13px;
+
+    margin-bottom: 18px;
+}
+
+.food-price span {
+    color: #888;
+    font-size: 13px;
+}
+
+.food-price strong {
+    color: #dc3545;
+    font-size: 18px;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.food-actions {
+    display: flex;
+    gap: 10px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #eee;
+}
+
+.food-actions .btn {
+    flex: 1;
+
+    font-size: 13px;
+
+    padding: 9px 12px;
+
+    white-space: nowrap;
+}
+
+.food-actions .btn-success {
+    background: #198754;
+    border-color: #198754;
+}
+
+.food-actions .btn-success:hover {
+    background: #157347;
+    border-color: #157347;
+
+    transform: translateY(-2px);
+}
+
+.food-actions .btn-outline-danger:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   ADMIN FOOD PAGE
+========================================= */
+
+.admin-food-page {
+    min-height: 100vh;
+    padding-top: 125px;
+    padding-bottom: 70px;
+    background: #f8f9fa;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.food-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.food-page-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #111;
+    margin: 5px 0;
+}
+
+.food-page-header p {
+    color: #777;
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.food-summary {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    width: fit-content;
+
+    background: #fff;
+
+    padding: 15px 22px;
+
+    border-radius: 18px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.food-summary-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffe5e8;
+    color: #dc3545;
+
+    font-size: 23px;
+}
+
+.food-summary small {
+    color: #777;
+    font-size: 12px;
+}
+
+.food-summary h4 {
+    margin: 2px 0 0;
+    font-size: 1.4rem;
+}
+
+
+/* =========================================
+   FOOD CARD
+========================================= */
+
+.food-card {
+    background: #fff;
+
+    border: none;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+
+    transition: 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 18px 40px rgba(0,0,0,0.10);
+}
+
+
+/* =========================================
+   FOOD IMAGE
+========================================= */
+
+.food-image-wrapper {
+    height: 230px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #eee;
+}
+
+.food-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s ease;
+}
+
+.food-card:hover .food-image {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.food-status {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+}
+
+.food-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 7px 12px;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    background: rgba(255,255,255,0.95);
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+.food-status-badge.approved {
+    color: #198754;
+}
+
+.food-status-badge.pending {
+    color: #d68900;
+}
+
+.food-status-badge.rejected {
+    color: #dc3545;
+}
+
+
+/* =========================================
+   FOOD BODY
+========================================= */
+
+.food-body {
+    padding: 24px;
+}
+
+.food-body h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    color: #111;
+
+    margin-bottom: 10px;
+}
+
+.food-description {
+    color: #777;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    min-height: 45px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.food-price {
+    color: #dc3545;
+
+    font-size: 1.35rem;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.food-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.food-actions .btn {
+    font-size: 13px;
+
+    padding: 9px 14px;
+
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.food-actions .btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.food-empty-state {
+    background: #fff;
+
+    border-radius: 24px;
+
+    padding: 60px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.food-empty-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffe5e8;
+
+    color: #dc3545;
+
+    font-size: 30px;
+}
+
+.food-empty-state h4 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.food-empty-state p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .admin-food-page {
+        padding-top: 105px;
+        padding-bottom: 45px;
+    }
+
+    .food-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .food-page-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .food-page-header .btn {
+        width: 100%;
+    }
+
+    .food-summary {
+        width: 100%;
+    }
+
+    .food-image-wrapper {
+        height: 220px;
+    }
+
+    .food-body {
+        padding: 20px;
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .food-image-wrapper {
+        height: 220px;
+    }
+
+    .food-body {
+        padding: 20px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .food-actions {
+        flex-direction: column;
+    }
+
+    .food-actions .btn {
+        width: 100%;
+    }
+
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .page-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .page-header .btn {
+        width: 100%;
+    }
+
+    .restaurant-summary {
+        width: 100%;
+    }
+
+    .restaurant-image-wrapper {
+        height: 220px;
+    }
+
+    .restaurant-body {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .restaurant-actions {
+        flex-direction: column;
+    }
+
+    .restaurant-actions .btn {
+        width: 100%;
+    }
+
+}
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .admin-page {
+        padding-top: 105px;
+        padding-bottom: 40px;
+    }
+
+    .admin-page-heading {
+        margin-bottom: 25px;
+        padding: 0 15px;
+    }
+
+    .admin-page-heading h1 {
+        font-size: 1.7rem;
+    }
+
+    .admin-page-heading .text-muted {
+        font-size: 14px;
+    }
+
+    .admin-form-card {
+        padding: 30px 22px;
+        border-radius: 20px;
+    }
+
+}
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991px) {
+
+    .admin-navbar .navbar-collapse {
+        background: #111;
+        margin-top: 15px;
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .admin-nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .admin-logout {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .dashboard-wrapper {
+        padding-top: 105px;
+    }
+
+    .welcome-section h1 {
+        font-size: 1.6rem;
+    }
+
+}

@@ -1,0 +1,30 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Local database / backups
+*.sql
+*.sqlite
+*.db
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*_backup/
+backup/
+
+config/db.php

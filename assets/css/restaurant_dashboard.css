@@ -1,0 +1,297 @@
+/* =========================================
+   RESTAURANT DASHBOARD
+========================================= */
+
+.restaurant-dashboard {
+    min-height: 100vh;
+    padding-top: 125px;
+    padding-bottom: 70px;
+    background: #f8f9fa;
+}
+
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.restaurant-welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+.dashboard-label {
+    color: #dc3545;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.restaurant-welcome h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+
+    color: #111;
+
+    margin: 5px 0 8px;
+}
+
+.restaurant-welcome p {
+    color: #777;
+    margin: 0;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   RESTAURANT NAME
+========================================= */
+
+.restaurant-name-card {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    background: #fff;
+
+    padding: 18px 22px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+
+    margin-bottom: 30px;
+}
+
+.restaurant-name-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #fff0f1;
+    color: #dc3545;
+
+    font-size: 24px;
+}
+
+.restaurant-name-card small {
+    color: #777;
+    font-size: 13px;
+}
+
+.restaurant-name-card h4 {
+    margin: 2px 0 0;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   STAT CARDS
+========================================= */
+
+.restaurant-stat-card {
+    background: #fff;
+
+    border-radius: 20px;
+
+    padding: 24px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    height: 100%;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+
+    transition: 0.3s ease;
+}
+
+.restaurant-stat-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+
+.stat-icon {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+.total-icon {
+    background: #e7f1ff;
+    color: #0d6efd;
+}
+
+.approved-icon {
+    background: #e8fff1;
+    color: #198754;
+}
+
+.pending-icon {
+    background: #fff4db;
+    color: #ff9800;
+}
+
+.rejected-icon {
+    background: #ffe5e8;
+    color: #dc3545;
+}
+
+
+.stat-number {
+    font-size: 1.7rem;
+    font-weight: 700;
+
+    color: #111;
+}
+
+.stat-label {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading span {
+    color: #dc3545;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.section-heading h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    margin: 3px 0 0;
+}
+
+
+/* =========================================
+   MANAGEMENT CARDS
+========================================= */
+
+.restaurant-management-card {
+    background: #fff;
+
+    border-radius: 20px;
+
+    padding: 28px;
+
+    height: 100%;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+
+    transition: 0.3s ease;
+}
+
+.restaurant-management-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.management-icon {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff0f1;
+    color: #dc3545;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+.restaurant-management-card h5 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.restaurant-management-card p {
+    color: #777;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    min-height: 45px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .restaurant-dashboard {
+        padding-top: 105px;
+        padding-bottom: 45px;
+    }
+
+    .restaurant-welcome {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .restaurant-welcome h1 {
+        font-size: 1.7rem;
+    }
+
+    .restaurant-welcome .btn {
+        width: 100%;
+    }
+
+    .restaurant-name-card {
+        padding: 16px;
+    }
+
+    .restaurant-stat-card {
+        padding: 20px;
+    }
+}

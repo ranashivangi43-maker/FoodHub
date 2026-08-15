@@ -1,0 +1,269 @@
+/* =========================================
+   ADD FOOD PAGE
+========================================= */
+
+.add-food-page {
+    min-height: 100vh;
+    padding: 120px 0 60px;
+    background: #f8f9fa;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.add-food-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 35px;
+}
+
+.add-food-header h1 {
+    margin: 6px 0 8px;
+    font-size: 34px;
+    font-weight: 700;
+    color: #212529;
+}
+
+.add-food-header p {
+    margin: 0;
+    color: #6c757d;
+    font-size: 15px;
+}
+
+.dashboard-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #dc3545;
+}
+
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.add-food-card {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 18px;
+    padding: 35px 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.add-food-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 24px;
+}
+
+.form-full {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================
+   FORM ELEMENTS
+========================================= */
+
+.form-section {
+    margin: 0;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.form-control {
+    min-height: 48px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 11px 14px;
+    transition: 0.2s ease;
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-control:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.10);
+}
+
+.input-group-text {
+    min-width: 48px;
+    justify-content: center;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 10px 0 0 10px;
+    color: #495057;
+    font-weight: 600;
+}
+
+.input-group .form-control {
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* =========================================
+   HELP TEXT
+========================================= */
+
+.form-help {
+    display: block;
+    margin-top: 7px;
+    color: #8a8f94;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   IMAGE UPLOAD
+========================================= */
+
+.image-upload-box {
+    padding: 20px;
+    background: #fafafa;
+    border: 1px dashed #ced4da;
+    border-radius: 12px;
+}
+
+.image-upload-box .form-control {
+    background: #ffffff;
+}
+
+
+/* =========================================
+   APPROVAL NOTICE
+========================================= */
+
+.approval-notice {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 30px;
+    padding: 17px 20px;
+
+    background: #fff8e6;
+    border: 1px solid #ffe08a;
+    border-radius: 12px;
+}
+
+.approval-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff0bd;
+    color: #a87800;
+
+    font-size: 19px;
+}
+
+.approval-notice strong {
+    display: block;
+    color: #795900;
+    font-size: 14px;
+}
+
+.approval-notice p {
+    margin: 3px 0 0;
+    color: #856404;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 30px;
+    padding-top: 25px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.form-actions .btn {
+    min-width: 130px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .add-food-page {
+        padding: 100px 15px 40px;
+    }
+
+    .add-food-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .add-food-header h1 {
+        font-size: 28px;
+    }
+
+    .add-food-card {
+        padding: 25px 20px;
+    }
+
+    .add-food-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-full {
+        grid-column: auto;
+    }
+
+    .approval-notice {
+        align-items: flex-start;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+}

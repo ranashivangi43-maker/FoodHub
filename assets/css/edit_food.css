@@ -1,0 +1,287 @@
+/* =========================================
+   EDIT FOOD PAGE
+========================================= */
+
+.edit-food-page {
+    padding: 40px 0 60px;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.edit-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.edit-label {
+    color: #dc3545;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.edit-page-header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.edit-page-header p {
+    color: #777;
+    margin: 0;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.edit-food-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================
+   IMAGE SECTION
+========================================= */
+
+.food-preview-section {
+    height: 100%;
+    min-height: 620px;
+    padding: 40px;
+    background: #fff8f8;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.preview-label {
+    color: #dc3545;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.food-preview-image {
+    width: 100%;
+    max-width: 360px;
+    height: 320px;
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    background: #eee;
+
+    margin-bottom: 25px;
+}
+
+.food-preview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.food-preview-section h4 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.preview-price {
+    color: #dc3545;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   FORM SECTION
+========================================= */
+
+.edit-form-section {
+    padding: 45px;
+}
+
+.form-heading {
+    margin-bottom: 30px;
+}
+
+.form-heading h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-heading p {
+    color: #777;
+    margin: 0;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-control,
+.input-group-text {
+    min-height: 48px;
+    border-color: #e2e2e2;
+}
+
+.form-control:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.1);
+}
+
+.input-group-text {
+    background: #f8f9fa;
+    color: #dc3545;
+}
+
+
+/* =========================================
+   IMAGE UPLOAD
+========================================= */
+
+.image-upload-box {
+    border: 1px dashed #d5d5d5;
+    border-radius: 14px;
+    padding: 20px;
+    background: #fafafa;
+}
+
+.image-upload-box > i {
+    font-size: 28px;
+    color: #dc3545;
+    float: left;
+    margin-right: 15px;
+}
+
+.image-upload-box strong {
+    display: block;
+    font-size: 14px;
+}
+
+.image-upload-box small {
+    color: #888;
+}
+
+
+/* =========================================
+   APPROVAL NOTICE
+========================================= */
+
+.approval-notice {
+    display: flex;
+    gap: 12px;
+
+    padding: 15px;
+    border-radius: 12px;
+
+    background: #fff8e6;
+    border: 1px solid #ffe3a3;
+
+    margin-bottom: 25px;
+}
+
+.approval-notice > i {
+    color: #d99a00;
+    font-size: 20px;
+}
+
+.approval-notice strong {
+    font-size: 14px;
+}
+
+.approval-notice p {
+    margin: 3px 0 0;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .food-preview-section {
+        min-height: auto;
+        padding: 35px;
+    }
+
+    .food-preview-image {
+        height: 280px;
+    }
+
+    .edit-form-section {
+        padding: 35px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .edit-food-page {
+        padding: 100px 15px 40px;
+    }
+
+    .edit-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .edit-page-header h1 {
+        font-size: 26px;
+    }
+
+    .edit-form-section {
+        padding: 25px 20px;
+    }
+
+    .food-preview-section {
+        padding: 25px 20px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+
+}
