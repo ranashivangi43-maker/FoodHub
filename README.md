@@ -371,6 +371,43 @@ FoodHub/
 └── README.md
 ```
 
+## 🖼️ Screenshots
+
+### 👤 User
+
+| Home | Cart & Checkout |
+|---|---|
+| ![Home](screenshots/user/home.png) | ![Cart](screenshots/user/cart.png) |
+
+| My Orders | Wishlist |
+|---|---|
+| ![My Orders](screenshots/user/myOrder.png) | ![Wishlist](screenshots/user/wishlist.png) |
+
+---
+
+### 🏪 Restaurant
+
+| Dashboard | Manage Food |
+|---|---|
+| ![Restaurant Dashboard](screenshots/restaurant/dashboard.png) | ![Manage Food](screenshots/restaurant/myFood.png) |
+
+| Orders | Order Details |
+|---|---|
+| ![Orders](screenshots/restaurant/order.png) | ![Order Details](screenshots/restaurant/orderDetails.png) |
+
+---
+
+### 🛡️ Admin
+
+| Dashboard | Manage Restaurants |
+|---|---|
+| ![Admin Dashboard](screenshots/admin/dashboard.png) | ![Manage Restaurants](screenshots/admin/manage_restaurant.png) |
+
+| Food Approval | Restaurant View |
+|---|---|
+| ![Food Approval](screenshots/admin/food_approval.png) | ![Restaurant View](screenshots/admin/view_restaurant.png) |
+
+
 🔐 Key Implementation Details
 
 Session-based authentication
