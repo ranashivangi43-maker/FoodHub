@@ -371,41 +371,73 @@ FoodHub/
 └── README.md
 ```
 
-## 🖼️ Screenshots
+## 🖼 Screenshots
 
-### 👤 User
+### 👤 Customer Module
 
-| Home | Cart & Checkout |
-|---|---|
-| ![Home](screenshots/user/home.png) | ![Cart](screenshots/user/cart.png) |
+| Landing / Home                     | Register                                   |
+| ---------------------------------- | ------------------------------------------ |
+| ![Home](screenshots/user/home.png) | ![Register](screenshots/user/register.png) |
 
-| My Orders | Wishlist |
-|---|---|
-| ![My Orders](screenshots/user/myOrder.png) | ![Wishlist](screenshots/user/wishlist.png) |
+| Login                                | Dashboard                                    |
+| ------------------------------------ | -------------------------------------------- |
+| ![Login](screenshots/user/login.png) | ![Dashboard](screenshots/user/dashboard.png) |
+
+| Profile                                  | Edit Profile                                      |
+| ---------------------------------------- | ------------------------------------------------- |
+| ![Profile](screenshots/user/profile.png) | ![Edit Profile](screenshots/user/editProfile.png) |
+
+| Cart                               | Wishlist                                   |
+| ---------------------------------- | ------------------------------------------ |
+| ![Cart](screenshots/user/cart.png) | ![Wishlist](screenshots/user/wishlist.png) |
+
+| Checkout                                   | My Orders                                  |
+| ------------------------------------------ | ------------------------------------------ |
+| ![Checkout](screenshots/user/checkout.png) | ![My Orders](screenshots/user/myOrder.png) |
+
+| Customer Navigation                                           |
+| ------------------------------------------------------------- |
+| ![Customer Navigation](screenshots/user/navbar_dashboard.png) |
 
 ---
 
-### 🏪 Restaurant
+### 🏪 Restaurant Module
 
-| Dashboard | Manage Food |
-|---|---|
-| ![Restaurant Dashboard](screenshots/restaurant/dashboard.png) | ![Manage Food](screenshots/restaurant/myFood.png) |
+| Dashboard                                                     | Complete Restaurant Profile                                                          |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| ![Restaurant Dashboard](screenshots/restaurant/dashboard.png) | ![Complete Restaurant Profile](screenshots/restaurant/completeRestaurantProfile.png) |
 
-| Orders | Order Details |
-|---|---|
+| Add Food                                        | My Food / Manage Food                         |
+| ----------------------------------------------- | --------------------------------------------- |
+| ![Add Food](screenshots/restaurant/addFood.png) | ![My Food](screenshots/restaurant/myFood.png) |
+
+| Edit Profile                                            | Pending Food                                            |
+| ------------------------------------------------------- | ------------------------------------------------------- |
+| ![Edit Profile](screenshots/restaurant/editProfile.png) | ![Pending Food](screenshots/restaurant/pendingFood.png) |
+
+| Orders                                      | Order Details                                             |
+| ------------------------------------------- | --------------------------------------------------------- |
 | ![Orders](screenshots/restaurant/order.png) | ![Order Details](screenshots/restaurant/orderDetails.png) |
 
 ---
 
-### 🛡️ Admin
+### 🛡️ Admin Module
 
-| Dashboard | Manage Restaurants |
-|---|---|
-| ![Admin Dashboard](screenshots/admin/dashboard.png) | ![Manage Restaurants](screenshots/admin/manage_restaurant.png) |
+| Dashboard                                           | Add Restaurant                                          |
+| --------------------------------------------------- | ------------------------------------------------------- |
+| ![Admin Dashboard](screenshots/admin/dashboard.png) | ![Add Restaurant](screenshots/admin/add_restaurant.png) |
 
-| Food Approval | Restaurant View |
-|---|---|
-| ![Food Approval](screenshots/admin/food_approval.png) | ![Restaurant View](screenshots/admin/view_restaurant.png) |
+| Manage Restaurants                                             | View Restaurant                                           |
+| -------------------------------------------------------------- | --------------------------------------------------------- |
+| ![Manage Restaurants](screenshots/admin/manage_restaurant.png) | ![View Restaurant](screenshots/admin/view_restaurant.png) |
+
+| Food Approval                                         |
+| ----------------------------------------------------- |
+| ![Food Approval](screenshots/admin/food_approval.png) |
+
+---
+
+These screenshots demonstrate the main user-facing interfaces and role-specific functionality implemented in FoodHub.
 
 
 🔐 Key Implementation Details
